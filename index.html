@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Studio</title>
+
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,13 +12,14 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
+    <title>Studio</title>
   </head>
 
   <body>
     <div class="wrapper">
       <div class="container">
         <header class="header">
-          <a href="index.html" class="logo-style link-no-underline"
+          <a href="index.html" class="logo-style no-deco"
             ><span class="blue-text"> Web</span>Studio</a
           >
           <nav>
@@ -26,21 +27,17 @@
               <li>
                 <a
                   href="./index.html"
-                  class="link-style link-no-underline blue-text"
+                  class="link-style no-deco blue-text is-active"
                   >Agencja</a
                 >
               </li>
               <li>
-                <a
-                  href="./portfolio.html"
-                  class="link-style link-no-underline blue-text"
-                  >Portfoliooooo</a
+                <a href="./portfolio.html" class="link-style no-deco blue-text"
+                  >Portfolio</a
                 >
               </li>
               <li>
-                <a
-                  href="/index.html"
-                  class="link-style link-no-underline blue-text"
+                <a href="/index.html" class="link-style no-deco blue-text"
                   >Kontakt</a
                 >
               </li>
@@ -49,7 +46,7 @@
           <ul class="nav-list nav-contacts">
             <li>
               <a
-                class="link-no-underline contact-link-style blue-text"
+                class="no-deco contact-link-style blue-text"
                 href="mailto:info@devstudio.com"
                 ><svg class="icon-nav">
                   <use
@@ -65,7 +62,7 @@
             <li>
               <a
                 href="tel:+48111111111"
-                class="link-no-underline contact-link-style blue-text"
+                class="no-deco contact-link-style blue-text"
                 ><svg class="icon-nav">
                   <use
                     xlink:href="./images/icons.svg#smartphone"
@@ -87,7 +84,9 @@
             EFEKTYWNE ROZWIĄZANIA <br />
             DLA WASZEGO BIZNESU
           </h1>
-          <button type="button" class="top-section-btn">Zamów usługe</button>
+          <button type="button" class="top-section-btn" data-modal-open>
+            Zamów usługe
+          </button>
         </div>
         <div class="container">
           <ul class="speciality-list no-margin no-padding">
@@ -146,29 +145,38 @@
           <div class="container">
             <h2 class="service-header">Czym się zajmujemy</h2>
             <ul class="service-list no-margin no-padding">
-              <li>
+              <li class="img-container">
                 <img
                   src="images/work1.jpg"
                   alt="czym sie zajmujemy"
                   width="370"
                   height="294"
                 />
+                <div class="picture-text-box">
+                  <p class="img-text">Aplikacje komputerowe</p>
+                </div>
               </li>
-              <li>
+              <li class="img-container">
                 <img
                   src="images/work2.jpg"
                   alt="czym sie zajmujemy"
                   width="370"
                   height="294"
                 />
+                <div class="picture-text-box">
+                  <p class="img-text">Aplikacje mobilne</p>
+                </div>
               </li>
-              <li>
+              <li class="img-container">
                 <img
                   src="images/work3.jpg"
                   alt="czym sie zajmujemy"
                   width="370"
                   height="294"
                 />
+                <div class="picture-text-box">
+                  <p class="img-text">Rozwiązania graficzne</p>
+                </div>
               </li>
             </ul>
           </div>
@@ -466,9 +474,7 @@
       </main>
       <footer class="footer">
         <div class="footer-box">
-          <a
-            href="./index.html"
-            class="footer-logo link-no-underline logo-white"
+          <a href="./index.html" class="footer-logo no-deco logo-white"
             ><span class="blue-text"> Web</span>Studio</a
           >
           <address>
@@ -479,14 +485,14 @@
               <li>
                 <a
                   href="mailto:info@example.com"
-                  class="address-link link-no-underline blue-text"
+                  class="address-link no-deco blue-text"
                   >info@example.com</a
                 >
               </li>
               <li>
                 <a
                   href="tel:+48111111111"
-                  class="address-link link-no-underline blue-text"
+                  class="address-link no-deco blue-text"
                   >+48111111111</a
                 >
               </li>
@@ -535,6 +541,13 @@
           </div>
         </div>
       </footer>
+      <div class="backdrop " data-modal>
+        <div class="modal">
+          <button type="button" class="close-btn" data-modal-close>X</button>
+        </div>
+      </div>
     </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
